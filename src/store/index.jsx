@@ -33,15 +33,12 @@ const initState = {
 const reducer = (state = initState, action) => {
   switch (action.type) {
     case "ADD_ACCOUNT":
-      console.log(action.payload);
       return {
-        ...state,
         accounts: [...state.accounts, action.payload],
         numberOfAccounts: state.numberOfAccounts + 1,
       };
     case "REMOVE_ACCOUNT":
       return {
-        ...state,
         accounts: action.payload,
         numberOfAccounts: state.numberOfAccounts - 1,
       };
